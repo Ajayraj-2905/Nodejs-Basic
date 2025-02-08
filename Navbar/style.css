@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0px 0px 10px 3px gray;
+}
+
+nav img {
+    height: 60px;
+    object-fit: cover;
+}
+
+nav .hamburger-menu {
+    /* background-color: red; */
+    display: none;
+}
+
+nav .hamburger-menu .hamburger-line {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+nav ul {
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+nav ul li {
+    cursor: pointer;
+
+    &:hover {
+        color: red;
+    }
+}
+
+nav ul li:first-child {
+    color: blue;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width:600px) {
+    nav .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        margin-right: 20px;
+        padding: 4px;
+        width: 40px;
+        height: 30px;
+        background-color: red;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    nav ul {
+        /* display: none; */
+        position: absolute;
+        top: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        gap: 4px;
+        width: 100%;
+        list-style-type: none;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    
+    nav ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        color: black;
+        text-align: center;
+        
+        &:hover {
+            background-color: red;
+            color: white;
+        }
+    }
+
+    nav ul li:first-child {
+        color: blue;
+
+        &:hover {
+            background-color: blue;
+            color: white;
+        }
+    }
+}
